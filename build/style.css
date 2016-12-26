@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono");
+body {
+  margin: 0;
+  background: #191919;
+  overflow: hidden;
+  min-height: 100%;
+  font-family: 'Ubuntu Mono', monospace;
+}
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+canvas, canvas:active, canvas:focus {
+  cursor: crosshair;
+}
+.keyboard {
+  position: absolute;
+  overflow: hidden;
+  list-style: none;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  padding: 0.2em 1em 1em;
+  margin: 0;
+  max-height: 2.6em;
+  max-width: 3.6em;
+  text-align: right;
+  font-size: 12px;
+  background-color: transparent;
+  color: #fff;
+  opacity: 0.4;
+  border-top-left-radius: 5px;
+  -webkit-transition: opacity 0.3s ease, background-color 0.2s ease, max-height 0.3s ease-in-out, max-width 0s 0.3s ease-in-out;
+  transition: opacity 0.3s ease, background-color 0.2s ease, max-height 0.3s ease-in-out, max-width 0s 0.3s ease-in-out;
+}
+.keyboard:hover {
+  -webkit-transition: opacity 0.3s ease, background-color 0.2s ease, max-height 0.3s ease-in-out, max-width 0s 0s ease-in-out;
+  transition: opacity 0.3s ease, background-color 0.2s ease, max-height 0.3s ease-in-out, max-width 0s 0s ease-in-out;
+  max-height: 21em;
+  max-width: 20em;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.keyboard__icon {
+  width: 3.4em;
+  height: 3.4em;
+  cursor: pointer;
+}
+.keyboard__item {
+  margin: 0.5em 0 0;
+}
+.keyboard__key {
+  display: inline-block;
+  min-width: 3em;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  padding: 0.2em;
+  margin: -0.2em 0 0 1em;
+}
